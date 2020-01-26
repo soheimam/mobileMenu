@@ -1,0 +1,48 @@
+
+
+.photos {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 15px;
+    padding-left: 4vw;
+    padding-right: 8vw;
+    border-bottom: 1px solid rgb(224, 222, 223);
+    background-color: white;
+
+
+  }
+  
+.photo {
+    margin: 10px;
+    position: relative;
+    vertical-align: top;
+  }
+
+  img{
+    width: 200px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    background: linear-gradient(rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(18, 18, 18, 0.4));
+  }
+  /*     font-size: 4vw;
+    font-family: MaisonNeueMedium;
+    letter-spacing: 0.025em;
+ */
+
+ .photo h2{
+  font-size: 4vw;
+  margin-left: 10px;
+  font-family: MaisonNeueMedium;
+  letter-spacing: 0.025em;
+ }

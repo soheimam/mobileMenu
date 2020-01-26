@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Toolbar from './components/Toolbar/Toolbar';
+import TopDrawer from './components/TopDrawer/TopDrawer';
+import menuData from './data/menuData';
 
-function App() {
+class App extends Component{
+  state = {
+    topDrawerOpen: false
+  };
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {topDrawerOpen: !prevState.topDrawerOpen}
+    })
+  };
+  
+  render () {
+    let topDrawer;
+    if (this.state.topDrawerOpen){
+      topDrawer = <TopDrawer data={menuData} />;
+    };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{height:'100vh'}} className="App">
+      <Toolbar drawerClickHandler={this.drawerToggleClickHandler} showMenu={this.state.topDrawerOpen} data={menuData.filter(item => item.topMenu)}/>
+      {topDrawer}
+      <main style={{marginTop:'64px'}}>
+      </main>
     </div>
   );
+  }
 }
 
 export default App;

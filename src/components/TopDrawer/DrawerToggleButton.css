@@ -1,0 +1,48 @@
+.toggle-button {
+    display:flex;
+    /* display:flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border:none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+.toggle-button_line {
+    width: 30px;
+    height: 2px;
+    background: black;
+}
+
+.open {
+    background: pink;
+}
+
+/* @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .toggle-button {
+        display:flex;
+    }
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      
+    .toggle-button {
+        display:flex;
+    }
+
+} */

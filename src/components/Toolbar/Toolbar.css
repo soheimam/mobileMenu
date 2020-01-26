@@ -1,0 +1,112 @@
+.toolbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 13.9vw;
+    z-index: 99;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(224, 222, 223);
+   
+}
+.toolbar_logo a{
+color: black;
+text-decoration: none;
+font-size: 1.5rem;
+
+}
+
+.toolbar_logo{
+    margin-left: 1rem;
+    
+}
+
+.toolbar_logo img {
+ width: 135px;
+}
+
+.toolbar_navigation{
+display: flex;
+height: 100%;
+align-items:center;
+padding: 0 1rem;
+    
+}
+.toolbar_navigation-items a{
+color: black;
+text-decoration: none;
+}
+
+.spacer{
+    flex: 1;
+}
+
+/* .arrow:after {
+    content: "";
+    display: block;
+    width: 1.33333vw;
+    height: 1.33333vw;
+    transform: rotate(45deg);
+    float: right;
+    right: 4vw;
+    margin-top: 1vw;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-width: 0px 0.5vw 0.5vw 0px;
+} */
+
+.arrow:after {
+    content: "";
+    display: block;
+    width: 1.33333vw;
+    height: 1.33333vw;
+    transform: rotate(45deg);
+    float: right;
+    right: 4vw;
+    margin-top: 1vw;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-width: 0px 0.5vw 0.5vw 0px;
+}
+.toolbar_navigation-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    
+}
+.toolbar_navigation-items li {
+   
+    padding: 0 0.5rem;
+
+
+    
+    
+}
+.toolbar_navigation-items a:hover,
+.toolbar_navigation-items a:active {
+    color: #ff3
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .toolbar_navigation-items {
+        display:none;
+    }
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      
+    .toolbar_navigation-items {
+        display:none;
+    }
+
+}
