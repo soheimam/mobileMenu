@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     background-color: white;
-    height: 13.9vw;
+    height: 8.9vw;
     z-index: 99;
     text-transform: uppercase;
     border-bottom: 1px solid rgb(224, 222, 223);
@@ -59,7 +59,7 @@ text-decoration: none;
 
 .arrow:after {
     content: "";
-    display: block;
+    display: none;
     width: 1.33333vw;
     height: 1.33333vw;
     transform: rotate(45deg);
@@ -96,8 +96,16 @@ text-decoration: none;
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
+      .toolbar{
+        height: 12.9vw;
+      }
     .toolbar_navigation-items {
         display:none;
+    }
+
+    .arrow:after {
+        content: "";
+        display: block;
     }
 }
 @media only screen 
@@ -105,8 +113,15 @@ text-decoration: none;
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
       
+    .toolbar{
+        height: 10.9vw;
+      }
     .toolbar_navigation-items {
         display:none;
     }
 
+    .arrow:after {
+        content: "";
+        display: block;
+    }
 }
